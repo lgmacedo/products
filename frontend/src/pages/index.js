@@ -12,7 +12,7 @@ export default function Home() {
       setProducts(response.data);
     });
     promise.catch(() => {
-      console.log("Deu não!");
+      console.log("An error occurred.");
     });
   }, []);
 
@@ -46,7 +46,7 @@ export default function Home() {
               <th>Promotional price</th>
             </tr>
             {products.map((p) => (
-              <tr>
+              <tr key={p.id}>
                 <td>{p.name}</td>
                 <td>{p.description}</td>
                 <td>{p.color}</td>
