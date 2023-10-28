@@ -77,6 +77,9 @@ const HomeContainer = styled.div`
   border-radius: 5px;
   font-family: "Roboto", sans-serif;
   padding-bottom: 50px;
+  @media (max-width: 500px) {
+    width: 95%;
+  }
 `;
 
 const TitleAndButton = styled.div`
@@ -92,18 +95,31 @@ const TitleAndButton = styled.div`
   img {
     width: 50px;
   }
+  @media (max-width: 500px) {
+    h1 {
+      font-size: 18px;
+    }
+    img {
+      width: 30px;
+    }
+  }
 `;
 
 const Table = styled.div`
   margin: auto;
   max-width: 95%;
   font-size: 20px;
+  overflow: auto;
+  @media (max-width: 500px) {
+    font-size: 15px;
+  }
 `;
 
 const Rows = styled.table`
   max-width: 95%;
   border: 1px solid;
   font-size: 18px;
+  border-collapse: collapse;
   th,
   td {
     text-align: left;
@@ -113,5 +129,17 @@ const Rows = styled.table`
   }
   th {
     font-weight: 700;
+  }
+  @media (max-width: 500px) {
+    font-size: 15px;
+    td {
+      text-align: left;
+      border-bottom: 1px solid;
+      border-right: 1px solid;
+      padding: 8px 6px;
+    }
+    th {
+      font-weight: 700;
+    }
   }
 `;

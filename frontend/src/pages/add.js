@@ -154,6 +154,25 @@ const AddProductContainer = styled.div`
       cursor: pointer;
     }
   }
+  @media (max-width: 500px) {
+    width: 95%;
+    form {
+      row-gap: 7px;
+      input,
+      input::placeholder {
+        font-size: 15px; /* Adjust the font size as needed */
+        padding-left: 5px;
+      }
+      input,
+      select {
+        min-height: 30px;
+      }
+      button{
+        height: 40px;
+        font-size: 15px;
+      }
+    }
+  }
 `;
 
 const TitleAndButton = styled.div`
@@ -168,5 +187,13 @@ const TitleAndButton = styled.div`
   }
   img {
     width: 50px;
+  }
+  @media (max-width: 500px) {
+    h1 {
+      font-size: 18px;
+    }
+    img {
+      width: 30px;
+    }
   }
 `;
